@@ -1,3 +1,7 @@
+[submodule "tabulous"]
+	path = vim/.vim/bundle/tabulous
+	url = git@github.com:webdevel/tabulous.git
+	branch = release-0.2.0
 [submodule "pathogen"]
 	path = vim/.vim/bundle/pathogen
 	url = git@github.com:webdevel/vim-pathogen.git
@@ -10,7 +14,7 @@
 	path = vim/.vim/bundle/ctrlp
 	url = git@github.com:webdevel/ctrlp.vim.git
 	branch = release-1.79
-[submodule "tabulous"]
-	path = vim/.vim/bundle/tabulous
-	url = git@github.com:webdevel/tabulous.git
-	branch = release-0.2.0
+[submodule "surround"]
+	path = vim/.vim/bundle/surround
+	url = git@github.com:webdevel/vim-surround.git
+	branch = release-v2.1
