@@ -19,6 +19,12 @@ set number
 " highlight search terms
 set hlsearch
 
+" map control+s to save/write file
+nnoremap <silent> <c-s> :update<cr>
+
+" map control+q to quit all
+nnoremap <silent> <c-q> :qall<cr>
+
 " normal mode map ctrl+h no highlight search terms, turns back on when searching
 nnoremap <C-h> :nohlsearch<CR>
 
