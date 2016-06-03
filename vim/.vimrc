@@ -22,6 +22,9 @@ set hlsearch
 " options for diffsplit and vimdiff
 set diffopt=filler,vertical
 
+" command-line abbreviation to open help in tab
+cabbrev help tab help
+
 " map control+s to save/write file
 nnoremap <silent> <c-s> :update<cr>
 
