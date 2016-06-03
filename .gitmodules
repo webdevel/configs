@@ -22,3 +22,7 @@
 	path = vim/.vim/bundle/commentary
 	url = git@github.com:webdevel/vim-commentary.git
 	branch = release-v1.3
+[submodule "fugitive"]
+	path = vim/.vim/bundle/fugitive
+	url = git@github.com:webdevel/vim-fugitive.git
+	branch = master
