@@ -5,7 +5,7 @@ syntax on
 set undolevels=128
 
 " set tabs to spaces
-set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 " copy indent from current line when starting a new line
 set autoindent
@@ -26,7 +26,7 @@ nnoremap <silent> <c-s> :update<cr>
 nnoremap <silent> <c-q> :qall<cr>
 
 " normal mode map ctrl+h no highlight search terms, turns back on when searching
-nnoremap <C-h> :nohlsearch<CR>
+nnoremap <c-h> :nohlsearch<cr>
 
 " unix style line endings \n
 set fileformat=unix
@@ -44,10 +44,10 @@ set switchbuf=usetab,newtab
 set listchars=eol:¶,tab:»›,trail:·,extends:▷,precedes:◁,space:·,nbsp:·
 
 " toggle visibility of whitespace characters by control+l in normal mode
-nnoremap <c-l> :set invlist list?<CR>
+nnoremap <c-l> :set invlist list?<cr>
 
 "" set .md to markdown file extension
-"autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+""autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 "
 "" enable fenced code block syntax highlighting
 "let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'java', 'php', 'c']
