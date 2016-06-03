@@ -18,3 +18,7 @@
 	path = vim/.vim/bundle/surround
 	url = git@github.com:webdevel/vim-surround.git
 	branch = release-v2.1
+[submodule "commentary"]
+	path = vim/.vim/bundle/commentary
+	url = git@github.com:webdevel/vim-commentary.git
+	branch = release-v1.3
