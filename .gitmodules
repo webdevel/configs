@@ -26,3 +26,7 @@
 	path = vim/.vim/bundle/fugitive
 	url = git@github.com:webdevel/vim-fugitive.git
 	branch = master
+[submodule "solarized"]
+	path = vim/.vim/bundle/solarized
+	url = git@github.com:webdevel/vim-colors-solarized.git
+	branch = master

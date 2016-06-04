@@ -75,3 +75,9 @@ let ctrlp_show_hidden = 1
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 
+set background=light
+colorscheme solarized
+hi TabLine      ctermfg=248         ctermbg=LightGray   cterm=NONE
+hi TabLineFill  ctermfg=248         ctermbg=LightGray   cterm=NONE
+hi TabLineSel   ctermfg=DarkGreen   ctermbg=White       cterm=NONE
+

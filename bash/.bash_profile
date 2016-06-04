@@ -21,7 +21,8 @@ source ~/.bash_completion/git-completion.bash
 
 if test "Darwin" = "$(uname -s)"; then
 
-  export TERM=darwin-256x96 # immediately followed by
+#  export TERM=darwin-256x96 # immediately followed by
+  export TERM=xterm-256color # immediately followed by
   /usr/bin/tput init
   export CLICOLOR=1
   export LSCOLORS=ExFxBxDxCxegedabagacad
