@@ -52,6 +52,10 @@ set listchars=eol:¶,tab:»›,trail:·,extends:▷,precedes:◁,space:·,nbsp:�
 " toggle visibility of whitespace characters by control+l in normal mode
 nnoremap <c-l> :set invlist list?<cr>
 
+" toggle paste options
+execute "set <a-p>=\ep"
+nnoremap <a-p> :set invpaste paste?<cr>
+
 "" set .md to markdown file extension
 ""autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 "
