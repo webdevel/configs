@@ -14,12 +14,15 @@ shopt -s histappend
 HISTSIZE=4500
 HISTFILESIZE=9000
 
+alias ls='ls --color=auto'
 alias ll='ls -l'
 
-complete -d cd
-source ~/.bash_completion/git-completion.bash
+PS1='\u@\h \W \$ '
 
 if test "Darwin" = "$(uname -s)"; then
+
+  complete -d cd
+  source ~/.bash_completion/git-completion.bash
 
 #  export TERM=darwin-256x96 # immediately followed by
   export TERM=xterm-256color # immediately followed by
