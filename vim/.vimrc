@@ -79,16 +79,16 @@ let ctrlp_show_hidden = 1
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 
-set background=light
-colorscheme solarized
-" colorscheme default
+set background=dark
+" colorscheme solarized
+colorscheme default
 " when background is light ctermfg=248
-hi TabLine      ctermfg=248         ctermbg=LightGray   cterm=NONE
-hi TabLineFill  ctermfg=248         ctermbg=LightGray   cterm=NONE
-hi TabLineSel   ctermfg=DarkGreen   ctermbg=White       cterm=NONE
-" hi TabLine      ctermfg=Black         ctermbg=LightGray   cterm=NONE
-" hi TabLineFill  ctermfg=Black         ctermbg=LightGray   cterm=NONE
-" hi TabLineSel   ctermfg=DarkGreen     ctermbg=Black       cterm=NONE
+" hi TabLine      ctermfg=248         ctermbg=LightGray   cterm=NONE
+" hi TabLineFill  ctermfg=248         ctermbg=LightGray   cterm=NONE
+" hi TabLineSel   ctermfg=DarkGreen   ctermbg=White       cterm=NONE
+hi TabLine      ctermfg=Black         ctermbg=LightGray   cterm=NONE
+hi TabLineFill  ctermfg=Black         ctermbg=LightGray   cterm=NONE
+hi TabLineSel   ctermfg=DarkGreen     ctermbg=Black       cterm=NONE
 " let &t_8f="\e[38;2;%ld;%ld;%ldm"
 " let &t_8b="\e[48;2;%ld;%ld;%ldm"
 " set termguicolors
