@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Alsa Mixer Audio Controls
+GenericName=Audio Controls
+Comment=Control sound volume, unmute, set sound card, adjust microphone
+Encoding=UTF-8
+Exec=alsamixer
+Icon=audio-volume-high
+Type=Application
+Terminal=true
+StartupNotify=false
+Categories=AudioVideo
+Keywords=Audio;Sound

@@ -50,3 +50,9 @@ fi
 #ssh-add ~/.ssh/id_rsa
 #ssh-add ~/.ssh/id_rsa_webwhammy
 
+if test "root" != "$USER" && test -z $DISPLAY && test -n $XDG_VTNR && test 1 -eq $XDG_VTNR; then
+
+  exec startx -- -quiet
+
+fi
+
