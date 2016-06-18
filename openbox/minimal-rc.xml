@@ -757,7 +757,49 @@
   # end of the example
 -->
 
-  <application type="normal">
+  <application type="normal" role="browser">
+
+    <maximized>true</maximized>
+
+  </application>
+
+  <application type="normal" name="urxvt">
+
+    <maximized>true</maximized>
+
+  </application>
+
+  <application type="normal" name="pcmanfm">
+
+    <maximized>true</maximized>
+
+  </application>
+
+  <application type="normal" name="gpicview">
+
+    <maximized>true</maximized>
+
+  </application>
+
+  <application type="normal" name="leafpad">
+
+    <maximized>true</maximized>
+
+  </application>
+
+  <application type="normal" name="libreoffice">
+
+    <maximized>true</maximized>
+
+  </application>
+
+  <application type="normal" name="gimp*">
+
+    <maximized>true</maximized>
+
+  </application>
+
+  <application type="normal" name="vlc">
 
     <maximized>true</maximized>
 
