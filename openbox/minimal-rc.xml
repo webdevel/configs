@@ -766,6 +766,7 @@
   <application type="normal" name="urxvt">
 
     <maximized>true</maximized>
+    <decor>no</decor>
 
   </application>
 

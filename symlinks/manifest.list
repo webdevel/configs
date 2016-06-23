@@ -1,28 +1,30 @@
 
-ln -sv $HOME/.git/configs/tmux/Scripts/session.sh $HOME/.scripts/session.sh
-ln -sv $HOME/.git/configs/tmux/Scripts/close.sh $HOME/.scripts/close.sh
-ln -sv $HOME/.git/configs/bash/.bashrc $HOME/.bashrc
-ln -sv $HOME/.git/configs/vim/.vimrc $HOME/.vimrc
-ln -sv $HOME/.git/configs/git/.gitconfig $HOME/.gitconfig
-ln -sv $HOME/.git/configs/bash/.bash_profile $HOME/.bash_profile
-ln -sv $HOME/.git/configs/urxvt/.Xresources $HOME/.Xresources
-ln -sv $HOME/.git/configs/vim/.vim $HOME/.vim
-ln -sv $HOME/.git/configs/kbd/.kbd $HOME/.kbd
-ln -sv $HOME/.git/configs/bash/.inputrc $HOME/.inputrc
-ln -sv $HOME/.git/configs/freedesktop.org/alsamixer.desktop $HOME/.local/share/applications/alsamixer.desktop
-ln -sv $HOME/.git/configs/bash/.bash_logout $HOME/.bash_logout
-ln -sv $HOME/.git/configs/tmux/.tmux.conf $HOME/.tmux.conf
-ln -sv $HOME/.git/configs/lxpanel/minimal-panel $HOME/.config/lxpanel/default/panels/panel
-ln -sv $HOME/.git/configs/openbox/startup $HOME/.config/openbox/startup
-ln -sv $HOME/.git/configs/openbox/autostart $HOME/.config/openbox/autostart
-ln -sv $HOME/.git/configs/openbox/minimal-menu.xml $HOME/.config/openbox/menu.xml
-ln -sv $HOME/.git/configs/openbox/minimal-rc.xml $HOME/.config/openbox/rc.xml
-ln -sv $HOME/.git/configs/i3wm $HOME/.config/i3
-ln -sv $HOME/.git/configs/xorg/.xinitrc $HOME/.xinitrc
-ln -sv $HOME/.git/configs/xorg/.xserverrc $HOME/.xserverrc
+$HOME/git/configs/freedesktop.org/eject.desktop $HOME/.local/share/applications/eject.desktop
+$HOME/git/configs/tmux/Scripts/session.sh $HOME/.scripts/session.sh
+$HOME/git/configs/tmux/Scripts/close.sh $HOME/.scripts/close.sh
+$HOME/git/configs/bash/.bashrc $HOME/.bashrc
+$HOME/git/configs/vim/.vimrc $HOME/.vimrc
+$HOME/git/configs/git/.gitconfig $HOME/.gitconfig
+$HOME/git/configs/bash/.bash_profile $HOME/.bash_profile
+$HOME/git/configs/urxvt/.Xresources $HOME/.Xresources
+$HOME/git/configs/vim/.vim $HOME/.vim
+$HOME/git/configs/kbd/.kbd $HOME/.kbd
+$HOME/git/configs/bash/.inputrc $HOME/.inputrc
+$HOME/git/configs/freedesktop.org/alsamixer.desktop $HOME/.local/share/applications/alsamixer.desktop
+$HOME/git/configs/bash/.bash_logout $HOME/.bash_logout
+$HOME/git/configs/tmux/.tmux.conf $HOME/.tmux.conf
+$HOME/git/configs/lxpanel/minimal-panel $HOME/.config/lxpanel/default/panels/panel
+$HOME/git/configs/openbox/startup $HOME/.config/openbox/startup
+$HOME/git/configs/openbox/autostart $HOME/.config/openbox/autostart
+$HOME/git/configs/openbox/minimal-menu.xml $HOME/.config/openbox/menu.xml
+$HOME/git/configs/openbox/minimal-rc.xml $HOME/.config/openbox/rc.xml
+$HOME/git/configs/i3wm $HOME/.config/i3
+$HOME/git/configs/xorg/.xinitrc $HOME/.xinitrc
+$HOME/git/configs/xorg/.xserverrc $HOME/.xserverrc
 
-#/etc/fonts/conf.d/19-system-overrides.conf
-#/etc/X11/xorg.conf.d/99-synaptics-overrides.conf
-#/etc/X11/xorg.conf.d/90-xkb-overrides.conf
-#/etc/vconsole.conf
-#$HOME/.git/configs/systemd/getty@tty1-override.conf /etc/systemd/system/getty@tty1.service.d/override.conf
+#$HOME/git/configs/xorg/10-monitor-overrides.conf /etc/X11/xorg.conf.d/10-monitor-overrides.conf
+#$HOME/git/configs/fontconfig/19-system-overrides.conf /etc/fonts/conf.d/19-system-overrides.conf
+#$HOME/git/configs/xorg/99-synaptics-overrides.conf /etc/X11/xorg.conf.d/99-synaptics-overrides.conf
+#$HOME/git/configs/xorg/90-xkb-overrides.conf /etc/X11/xorg.conf.d/90-xkb-overrides.conf
+#$HOME/git/configs/vconsole/vconsole.conf /etc/vconsole.conf
+#$HOME/git/configs/systemd/getty@tty1-override.conf /etc/systemd/system/getty@tty1.service.d/override.conf

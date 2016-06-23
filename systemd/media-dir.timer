@@ -1,0 +1,10 @@
+[Unit]
+Description=Run media-dir.service on boot
+
+[Timer]
+OnBootSec=9
+#OnUnitActiveSec=1min 
+WakeSystem=false
+
+[Install]
+WantedBy=timers.target

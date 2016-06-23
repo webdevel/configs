@@ -1,12 +1,29 @@
-[Unit]
-Description=User suspend actions
-Before=suspend.target
+# /lib/systemd/system/suspend@.service
+# systemctl enable suspend@1000
+# Use sleep.target hook to lock screen
+# sleep.target: A special target unit that is pulled in by suspend.target,
+# hibernate.target and hybrid-sleep.target and may be used to hook units
+# into the sleep state logic. - man systemd.special
+# Immediately before entering system suspend systemd-suspend.service
+# will run all executables in /usr/lib/systemd/system-sleep/.
+# However, /system-sleep/ scripts are considered hacks. - man systemd-suspend.service 
 
+# man systemd.unit
+[Unit]
+Description=Suspend Actions for UID %i
+Before=sleep.target
+
+# man systemd.service
 [Service]
-User=%I
-Type=simple
+User=%i
+# Types: simple, forking, oneshot, notify, dbus, idle
+Type=forking
 Environment=DISPLAY=:0
+#ExecStartPre=/bin/echo "instance: %i"
 ExecStart=/usr/bin/i3lock -ec 000000
+#ExecStartPost=/bin/echo
+# Commands to execute to stop the service started via ExecStart
+#ExecStop=
 
 [Install]
-WantedBy=suspend.target
+WantedBy=sleep.target

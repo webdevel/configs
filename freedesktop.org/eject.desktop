@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Eject CD/DVD
+GenericName=Eject CD/DVD
+Comment=Eject CD/DVD
+Encoding=UTF-8
+Exec=eject
+Icon=media-eject
+Type=Application
+Terminal=true
+StartupNotify=false
+Categories=System
+Keywords=Eject;CD;DVD;

@@ -8,25 +8,25 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 if test -f $sysresources; then
 
-    xrdb -merge $sysresources
+  xrdb -merge $sysresources
 
 fi
 
 if test -f $sysmodmap; then
 
-    xmodmap $sysmodmap
+  xmodmap $sysmodmap
 
 fi
 
 if test -f "$userresources"; then
 
-    xrdb -merge "$userresources"
+  xrdb -merge "$userresources"
 
 fi
 
 if test -f "$usermodmap"; then
 
-    xmodmap "$usermodmap"
+  xmodmap "$usermodmap"
 
 fi
 
@@ -42,15 +42,14 @@ if test -d /etc/X11/xinit/xinitrc.d; then
 
 fi
 
-# set root window options
-xsetroot -solid black -cursor_name left_ptr &
+if test -d $HOME/.xinitrc.d; then
 
-# xscreensaver &
+  for f in $HOME/.xinitrc.d/?*.sh; do
 
-# run window manager
-# exec i3 -V >> ~/i3wm-$(date +'%F-%k-%M-%S' | sed 's#\s*##g').log 2>&1
-# exec i3 &>/dev/null
-# exec openbox-session &>/dev/null
-# exec openbox --sm-disable --startup ~/.config/openbox/startup >~/openbox.log 2>&1
-exec openbox --sm-disable --startup ~/.config/openbox/startup &>/dev/null
+    test -x "$f" && source "$f"
 
+  done
+
+  unset f
+
+fi
