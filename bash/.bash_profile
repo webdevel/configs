@@ -14,10 +14,24 @@ shopt -s histappend
 HISTSIZE=4500
 HISTFILESIZE=9000
 
-alias ls='ls --color=auto'
 alias ll='ls -l'
-alias grep='grep --color=auto'
 
+if test ! "Darwin" = "$(uname -s)"; then
+
+  alias ls='ls --color=auto'
+  # broken symlink color
+  eval $(dircolors -b)
+
+fi
+
+# when bash version 4 or greater, set version specific shell options
+if test 4 -le $(bash --version | grep -m 1 -oe version\ [0-9] | sed 's#.*version\ \([0-9]\).*#\1#'); then
+
+  shopt -s autocd
+
+fi
+
+alias grep='grep --color=auto'
 export GREP_COLOR="0;32"
 
 # less command color
@@ -29,9 +43,6 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[1;32m'
-
-# broken symlink color
-eval $(dircolors -b)
 
 PS1='\u@\h \W \$ '
 

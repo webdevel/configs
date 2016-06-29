@@ -1,4 +1,5 @@
 
+$HOME/git/configs/ssh/config $HOME/.ssh/config
 $HOME/git/configs/freedesktop.org/eject.desktop $HOME/.local/share/applications/eject.desktop
 $HOME/git/configs/tmux/Scripts/session.sh $HOME/.scripts/session.sh
 $HOME/git/configs/tmux/Scripts/close.sh $HOME/.scripts/close.sh

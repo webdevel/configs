@@ -4,6 +4,5 @@
 [[ $- != *i* ]] && return
 
 shopt -s checkwinsize
-shopt -s autocd
 stty -ixon
 
