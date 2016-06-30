@@ -3,6 +3,13 @@
 # execute bashrc if readable
 test -r ~/.bashrc && . ~/.bashrc
 
+# enable bash completion
+if test -f /opt/local/etc/profile.d/bash_completion.sh; then
+
+	source /opt/local/etc/profile.d/bash_completion.sh
+
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -49,7 +56,7 @@ PS1='\u@\h \W \$ '
 if test "Darwin" = "$(uname -s)"; then
 
   complete -d cd
-  source ~/.bash_completion/git-completion.bash
+  source ~/.completion/git-completion.bash
 
 #  export TERM=darwin-256x96 # immediately followed by
   export TERM=xterm-256color # immediately followed by
