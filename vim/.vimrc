@@ -52,6 +52,10 @@ set listchars=eol:¶,tab:»›,trail:·,extends:▷,precedes:◁,space:·,nbsp:�
 " toggle visibility of whitespace characters by control+l in normal mode
 nnoremap <c-l> :set invlist list?<cr>
 
+" toggle paste options
+execute "set <a-p>=\ep"
+nnoremap <a-p> :set invpaste paste?<cr>
+
 "" set .md to markdown file extension
 ""autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 "
@@ -74,4 +78,18 @@ let ctrlp_show_hidden = 1
 " nerd tree options
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
+
+set background=light
+colorscheme solarized
+" colorscheme default
+" when background is light ctermfg=248
+hi TabLine      ctermfg=248         ctermbg=LightGray   cterm=NONE
+hi TabLineFill  ctermfg=248         ctermbg=LightGray   cterm=NONE
+hi TabLineSel   ctermfg=DarkGreen   ctermbg=White       cterm=NONE
+" hi TabLine      ctermfg=Black         ctermbg=LightGray   cterm=NONE
+" hi TabLineFill  ctermfg=Black         ctermbg=LightGray   cterm=NONE
+" hi TabLineSel   ctermfg=DarkGreen     ctermbg=Black       cterm=NONE
+" let &t_8f="\e[38;2;%ld;%ld;%ldm"
+" let &t_8b="\e[48;2;%ld;%ld;%ldm"
+" set termguicolors
 

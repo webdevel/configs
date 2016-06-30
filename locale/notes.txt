@@ -1,0 +1,14 @@
+# see https://wiki.archlinux.org/index.php/beginners'_guide for more info
+
+Select a time zone:
+
+# tzselect
+
+Create the symbolic link /etc/localtime, where Zone/Subzone is the TZ value from tzselect:
+
+# ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
+
+It is recommended to adjust the time skew, and set the time standard to UTC:
+
+# hwclock --systohc --utc
+

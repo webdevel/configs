@@ -1,7 +1,7 @@
 [submodule "tabulous"]
 	path = vim/.vim/bundle/tabulous
 	url = git@github.com:webdevel/tabulous.git
-	branch = release-0.3.0
+	branch = release-0.5.0
 [submodule "pathogen"]
 	path = vim/.vim/bundle/pathogen
 	url = git@github.com:webdevel/vim-pathogen.git
@@ -25,4 +25,8 @@
 [submodule "fugitive"]
 	path = vim/.vim/bundle/fugitive
 	url = git@github.com:webdevel/vim-fugitive.git
+	branch = master
+[submodule "solarized"]
+	path = vim/.vim/bundle/solarized
+	url = git@github.com:webdevel/vim-colors-solarized.git
 	branch = master

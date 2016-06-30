@@ -1,0 +1,7 @@
+[Unit]
+Description=Make media dir
+
+[Service]
+User=root
+Type=simple
+ExecStart=/root/.scripts/media-dir.sh

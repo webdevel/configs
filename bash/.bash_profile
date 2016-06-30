@@ -3,6 +3,13 @@
 # execute bashrc if readable
 test -r ~/.bashrc && . ~/.bashrc
 
+# enable bash completion
+if test -f /opt/local/etc/profile.d/bash_completion.sh; then
+
+	source /opt/local/etc/profile.d/bash_completion.sh
+
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -16,12 +23,43 @@ HISTFILESIZE=9000
 
 alias ll='ls -l'
 
-complete -d cd
-source ~/.bash_completion/git-completion.bash
+if test ! "Darwin" = "$(uname -s)"; then
+
+  alias ls='ls --color=auto'
+  # broken symlink color
+  eval $(dircolors -b)
+
+fi
+
+# when bash version 4 or greater, set version specific shell options
+if test 4 -le $(bash --version | grep -m 1 -oe version\ [0-9] | sed 's#.*version\ \([0-9]\).*#\1#'); then
+
+  shopt -s autocd
+
+fi
+
+alias grep='grep --color=auto'
+export GREP_COLOR="0;32"
+
+# less command color
+export LESS=-R
+export LESS_TERMCAP_mb=$'\E[1;31m'
+export LESS_TERMCAP_md=$'\E[1;36m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[1;32m'
+
+PS1='\u@\h \W \$ '
 
 if test "Darwin" = "$(uname -s)"; then
 
-  export TERM=darwin-256x96 # immediately followed by
+  complete -d cd
+  source ~/.completion/git-completion.bash
+
+#  export TERM=darwin-256x96 # immediately followed by
+  export TERM=xterm-256color # immediately followed by
   /usr/bin/tput init
   export CLICOLOR=1
   export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -45,4 +83,10 @@ fi
 #eval $(ssh-agent)
 #ssh-add ~/.ssh/id_rsa
 #ssh-add ~/.ssh/id_rsa_webwhammy
+
+if test "root" != "$USER" && test -z $DISPLAY && test -n $XDG_VTNR && test 1 -eq $XDG_VTNR; then
+
+  exec startx -- -quiet
+
+fi
 

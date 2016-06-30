@@ -1,0 +1,85 @@
+! Xft settings
+! https://freedesktop.org/wiki/Specifications/XSettingsRegistry/
+! boolean options: 0no, 1yes, -1=default
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.antialias: 1
+Xft.hinting: 1
+! "hintnone", "hintslight", "hintmedium", or "hintfull"
+Xft.hintStyle: hintslight
+! Type of subpixel antialiasing; "none", "rgb", "bgr", "vrgb", "vbgr"
+Xft.rgba: rgb
+! Resolution for Xft, in 1024 * dots/inch. -1 to use default value
+Xft.dpi: 96
+
+! disable extensions
+URxvt.perl-ext:
+URxvt.perl-ext-common:
+
+! login options
+URxvt.loginShell: true
+
+! double-click word-selection delimiters
+URxvt.cutchars: `"'^~/|\(*)<=>[]{}@+"
+
+! buffer options
+URxvt.saveLines: 10000
+! do not scroll with output
+URxvt.scrollTtyOutput: false
+! scroll in relation to buffer (shift+pgup or mouse)
+URxvt.scrollWithBuffer: true
+! scroll back to bottom on keypress
+URxvt.scrollTtyKeypress: true
+! allow scroll of pager (e.g. scroll output of less)
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+! window decoration
+URxvt.internalBorder: 0
+URxvt.cursorBlink: false
+URxvt.borderLess: false
+URxvt.scrollBar: false 
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+
+! font options
+! rely on fonts for glyphs
+URxvt.skipBuiltinGlyphs: true
+URxvt.letterSpace: -2
+URxvt.xftAntialias: true
+URxvt.font: xft:inconsolata:size=16:antialias=true:hinting=true, xft:dejavu sans mono:size=16:antialias=true:hinting=true
+URxvt.boldFont: xft:inconsolata:size=16:antialias=true:hinting=true, xft:dejavu sans mono:size=16:antialias=true:hinting=true
+URxvt.italicFont: xft:inconsolata:size=16:antialias=true:hinting=true, xft:dejavu sans mono:size=16:antialias=true:hinting=true
+URxvt.bolditalicFont: xft:inconsolata:size=16:antialias=true:hinting=true, xft:dejavu sans mono:size=16:antialias=true:hinting=true
+
+! color scheme options
+! ANSI colors
+! color0  black,          Black,		Black
+! color8  bright black,   Grey25, 		DarkGray
+! color1  red,            Red3, 		DarkRed
+! color9  bright red,     Red,			Red
+! color2  green,          Green3,		DarkGreen
+! color10 bright green,   Green,		Green
+! color3  yellow,         Yellow3,		DarkYellow
+! color11 bright yellow,  Yellow,		Yellow
+! color4  blue,           Blue3,		DarkBlue
+! color12 bright blue,    Blue,			Blue
+! color5  magenta,        Magenta3,		DarkMagenta
+! color13 bright magenta, Magenta,		Magenta
+! color6  cyan,           Cyan3,		DarkCyan
+! color14 bright cyan,    Cyan,			Cyan
+! color7  white,          AntiqueWhite, LightGray
+! color15 bright white,   White,		White
+!
+! visual id default is 0x21 TrueColor 24 Planes
+! 0x60 TrueColor 32 Planes
+! see output of xdpyinfo for more
+!URxvt.visual: 0x60
+! bit-depth
+!URxvt.depth: 32
+URxvt.transparent: false
+URxvt.background: #000000
+URxvt.foreground: #ffffff
+URxvt.color0: #000000
+URxvt.color15: #ffffff
+

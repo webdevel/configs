@@ -1,0 +1,10 @@
+Host github
+  HostName github.com
+  ForwardAgent yes
+  IdentityFile $HOME/.ssh/id_rsa
+
+Host luci
+  HostName linksys-wrt1900acs
+  Port 22
+  User root
+  LocalForward 127.0.0.1:8000 127.0.0.1:80
