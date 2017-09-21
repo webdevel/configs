@@ -66,17 +66,22 @@ if test "Darwin" = "$(uname -s)"; then
 
   export PS1='\W \$ '
 
-  export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-
+  export PATH=$PATH:/Applications/Xcode.app/Contents/Developer/usr/bin
+  export PATH=$PATH:/Library/Developer/CommandLineTools/usr/bin
+  export PATH=$PATH:/Library/Developer/CommandLineTools/usr/libexec/git-core
   export PATH=/Applications/VirtualBox.app/Contents/MacOS:$PATH
   export PATH=~/Downloads/couchbase/Couchbase\ Server.app/Contents/MacOS:$PATH
-  export PATH=~/Downloads/eclipse/Eclipse.app/Contents/MacOS:$PATH
+#  export PATH=~/Downloads/eclipse/Eclipse.app/Contents/MacOS:$PATH
   export PATH=~/Downloads/eventstore:$PATH
   export PATH=~/Downloads/gradle/bin:$PATH
   export PATH=~/Downloads/maven/bin:$PATH
   export PATH=~/Downloads/mongodb/bin:$PATH
   export PATH=~/Library/Android/sdk/tools:$PATH
   export PATH=~/Library/Android/sdk/platform-tools:$PATH
+  export PATH=~/Downloads/composer:$PATH
+  export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 fi
 
