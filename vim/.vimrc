@@ -34,6 +34,15 @@ nnoremap <silent> <c-q> :qall<cr>
 " normal mode map ctrl+h no highlight search terms, turns back on when searching
 nnoremap <c-h> :nohlsearch<cr>
 
+" enable status line
+set laststatus=2
+
+" enable ruler metrics
+set ruler
+
+" enable code comment fold markers
+set foldmethod=marker
+
 " unix style line endings \n
 set fileformat=unix
 
@@ -47,7 +56,7 @@ nnoremap Q <nop>
 set switchbuf=usetab,newtab
 
 " set whitespace to visible characters
-set listchars=eol:¶,tab:»›,trail:·,extends:▷,precedes:◁,space:·,nbsp:·
+"set listchars=eol:¶,tab:»›,trail:·,extends:▷,precedes:◁,space:·,nbsp:·
 
 " toggle visibility of whitespace characters by control+l in normal mode
 nnoremap <c-l> :set invlist list?<cr>
@@ -79,16 +88,16 @@ let ctrlp_show_hidden = 1
 let NERDTreeShowHidden = 1
 let NERDTreeMinimalUI = 1
 
-set background=light
-colorscheme solarized
-" colorscheme default
-" when background is light ctermfg=248
-hi TabLine      ctermfg=248         ctermbg=LightGray   cterm=NONE
-hi TabLineFill  ctermfg=248         ctermbg=LightGray   cterm=NONE
-hi TabLineSel   ctermfg=DarkGreen   ctermbg=White       cterm=NONE
-" hi TabLine      ctermfg=Black         ctermbg=LightGray   cterm=NONE
-" hi TabLineFill  ctermfg=Black         ctermbg=LightGray   cterm=NONE
-" hi TabLineSel   ctermfg=DarkGreen     ctermbg=Black       cterm=NONE
+" enable custom color scheme
+colorscheme forests
+
+" set background=light
+" colorscheme solarized
+" hi TabLine      ctermfg=248         ctermbg=LightGray   cterm=NONE
+" hi TabLineFill  ctermfg=248         ctermbg=LightGray   cterm=NONE
+" hi TabLineSel   ctermfg=DarkGreen   ctermbg=White       cterm=NONE
+
+" 24-bit true color
 " let &t_8f="\e[38;2;%ld;%ld;%ldm"
 " let &t_8b="\e[48;2;%ld;%ld;%ldm"
 " set termguicolors

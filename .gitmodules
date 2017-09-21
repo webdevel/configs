@@ -30,3 +30,7 @@
 	path = vim/.vim/bundle/solarized
 	url = git@github.com:webdevel/vim-colors-solarized.git
 	branch = master
+[submodule "forests"]
+	path = vim/.vim/bundle/forests
+	url = git@github.com:webdevel/forests.git
+	branch = master

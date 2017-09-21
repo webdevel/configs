@@ -8,3 +8,9 @@ Host luci
   Port 22
   User root
   LocalForward 127.0.0.1:8000 127.0.0.1:80
+
+Host ubu17php
+  HostName localhost
+  Port 2222
+  User op
+  IdentityFile $HOME/.ssh/id_rsa
