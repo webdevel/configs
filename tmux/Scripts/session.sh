@@ -46,6 +46,7 @@ closeWindow()
   # renumber windows when they are removed
   tmux set-option renumber-windows on
 
+
   # iterate through user specified windows to close
   for window in $close; do
 
@@ -123,7 +124,7 @@ if test $SUCCESS $NOT_EQUALS $doesSessionExist; then
   isSessionCreated=$?
 
   # split window vertically
-  tmux split-window -vl $lines -t $session:0.0
+#  tmux split-window -vl $lines -t $session:0.0
 
 fi
 
@@ -147,7 +148,7 @@ if test $SUCCESS $EQUALS $isSessionCreated; then
   tmux select-pane -t $session:0.0
 
   # start editor in main window pane
-  tmux send-keys -t $session:0.0 "$editor" enter
+#  tmux send-keys -t $session:0.0 "$editor" enter
 
   # do not attach to session in this script or it will not exit until tmux does
   printf '\n%s\n' "NOW TRY: tmux attach -t $session"
@@ -156,4 +157,3 @@ fi
 
 # exit with the last commands exit status
 exit $?
-
