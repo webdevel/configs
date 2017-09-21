@@ -33,4 +33,4 @@
 [submodule "forests"]
 	path = vim/.vim/bundle/forests
 	url = git@github.com:webdevel/forests.git
-	branch = develop
+	branch = master
