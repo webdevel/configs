@@ -6,3 +6,6 @@
 shopt -s checkwinsize
 stty -ixon
 
+
+# added by travis gem
+[ -f /Users/steven/.travis/travis.sh ] && source /Users/steven/.travis/travis.sh
