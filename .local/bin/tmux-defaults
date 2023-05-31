@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+tmux -Lfoo -f/dev/null start\; show -g

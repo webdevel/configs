@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+# JetBrainsMono Nerd Font for symbols
+printf " %s " $(basename $SHELL) && $SHELL --version | awk '{printf "%.3s", $4 ; exit}'

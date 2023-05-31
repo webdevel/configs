@@ -1,0 +1,2 @@
+#!/usr/bin/sh
+tmux list-panes -a | cut -d : -f 1,2

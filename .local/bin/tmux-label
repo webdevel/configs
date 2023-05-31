@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+# JetBrainsMono Nerd Font for symbols
+tmux -V | awk '{printf "  tmux %.3s", $2}'

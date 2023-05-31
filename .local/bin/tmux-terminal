@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+tmux show default-terminal
+tmux show terminal-features

@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+amixer scontrols | awk '{printf "%s %s %s\n", $4,$5,$6}'

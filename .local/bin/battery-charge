@@ -1,0 +1,9 @@
+#/usr/bin/sh
+
+# JetBrainsMono Nerd Font for symbols
+# 󰁹 󰂄 󰂁 󰁿 󰁻
+BAT=/sys/class/power_supply/BAT1
+CHARGE=$(cat $BAT/charge_now)
+FULL=$(cat $BAT/charge_full)
+
+awk "BEGIN {printf \"󰁹 %.5s%%\", $CHARGE/$FULL*100}"

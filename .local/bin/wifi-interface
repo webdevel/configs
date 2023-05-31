@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+# /usr/sbin/iw dev
+/usr/sbin/iwconfig 2> /dev/null | grep ^w | awk '{print $1}'

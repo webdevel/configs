@@ -1,0 +1,38 @@
+#!/usr/bin/sh
+
+SCRIPT=$(basename $0)
+ssid=1776
+
+show_help()
+{
+cat << EOF
+
+Connect to WiFi.
+
+Usage: $SCRIPT [OPTIONS]
+
+OPTIONS:
+  -h    Show this help message
+  -s    SSID (default: $ssid)
+
+EXAMPLES:
+  ./$SCRIPT -s $ssid
+
+EOF
+}
+
+while getopts "hs:" option; do
+
+  case $option in
+
+    h)
+      show_help
+      exit
+      ;;
+    s)
+      ssid="$OPTARG"
+
+  esac
+
+done
+sudo nmcli dev wifi connect "$ssid"

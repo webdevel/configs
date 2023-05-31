@@ -1,0 +1,27 @@
+#!/usr/bin/sh
+
+DIRS=".local/bin
+.local/man
+.local/share/bash
+.local/share/fonts
+.local/src
+.local/state/bash
+.local/state/nvidia
+.local/state/system
+.config/alacritty
+.config/bash
+.config/boot
+.config/crypt
+.config/fontconfig
+.config/git
+.config/gnupg
+.config/nvidia
+.config/nvim
+.config/sysctl
+.config/tmux
+.config/udev"
+
+for d in $DIRS; do
+
+  cp --archive --update --verbose /run/media/${USER}${HOME}/$d $(dirname $d)
+done

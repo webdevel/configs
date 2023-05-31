@@ -1,0 +1,16 @@
+#!/usr/bin/sh
+
+card=1
+vol="110%"
+dcb="1dB"
+amixer -s $card <<EOF
+set Master $vol unmute
+set Master $dcb
+set PCM $vol unmute
+set PCM $dcb
+set Speaker $vol unmute
+set Speaker $dcb
+set Headphone $vol unmute
+set Headphone $dcb
+set Playback $vol unmute
+EOF

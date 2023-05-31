@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+
+card=1
+
+amixer sset Master unmute -c $card
+amixer sset Speaker unmute -c $card
+amixer sset Headphone unmute -c $card

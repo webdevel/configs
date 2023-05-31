@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+#/usr/sbin/iwlist scan 2> /dev/null | grep ESSID: | sort --unique
+sudo iw wlo1 scan 2> /dev/null | grep "[^A-Z]SSID:" | sort -u | awk '{print $2}'

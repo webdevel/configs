@@ -1,0 +1,11 @@
+#!/usr/bin/sh
+
+DIRS=".local/bin
+.local/share
+.local/state/bash
+.config/bash"
+
+for d in $DIRS; do
+
+  mkdir --mode 0700 --parents --verbose $HOME/$d
+done

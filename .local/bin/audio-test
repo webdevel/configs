@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+speaker-test --channels 2 --nloops 2 --test wav

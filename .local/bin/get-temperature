@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+# JetBrainsMono Nerd Font for symbols
+# get hottest machine temperature
+sensors -u | grep --fixed-strings --ignore-case _input | awk '{print $2}' | sort --numeric-sort  --reverse  | head --lines=1 | awk -F. '{printf "󰒆 %s°", $1}'

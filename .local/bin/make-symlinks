@@ -1,0 +1,13 @@
+#!/usr/bin/sh
+
+[ "$PWD" = "$HOME" ] || return
+
+LINKS=".config/bash/login:.bash_login
+.config/bash/logout:.bash_logout
+.config/bash/interactive:.bashrc
+.config/bash/completion_env:.config/bash_completion"
+
+for l in $LINKS; do
+
+  ln --symbolic --verbose $(echo $l | awk --field-separator : '{printf "%s %s\n", $1, $2}')
+done
