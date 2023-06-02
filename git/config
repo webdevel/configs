@@ -1,13 +1,13 @@
 [user]
 	name = Steven Garcia
-	email = webwhammy@gmail.com
+	email =
 [github]
 	user = webdevel
 [color]
 	ui = true
 [core]
-	editor = vim
-	excludesfile = /Users/steven/git/.gitignore
+	editor = nvim
+	excludesfile = ~/.config/git/ignore
 [merge]
 	tool = diff
 [credential]
