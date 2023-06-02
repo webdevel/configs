@@ -1,0 +1,46 @@
+# Control readline library used by bash in the interactive mode for line editing
+# man readline
+# man bash
+
+# none, visible, or audible
+set bell-style none
+
+# Turn on completion colors
+set colored-stats on
+
+# Color the typed completion prefix
+set colored-completion-prefix on
+
+# tab once for suggestions
+set show-all-if-ambiguous on
+
+# case handling
+set completion-ignore-case on
+
+# word with more than one completion and no partial completion
+# will list matches immediately if on
+set show-all-if-unmodified on
+
+# whether to query user regarding item limit
+set completion-query-items -1
+
+set print-completions-horizontally on
+
+set menu-complete-display-prefix on
+
+set page-completions off
+
+TAB: menu-complete
+
+Control-SPACE: history-search-backward
+
+# up-arrow func, down-arrow vars
+"\e[A": dump-functions 1
+"\e[B": dump-variables 1
+# dump-functions dump-variables dump-macros dynamic-complete-history
+
+# macros
+$if Bash
+# quote the current or previous word Ctrl+x q
+"\C-xq": "\eb\"\ef\""
+$endif

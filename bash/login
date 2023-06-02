@@ -1,0 +1,55 @@
+# BASHOPTS shopt -s sourcepath
+# --init-file
+# --rcfile
+# INPUTRC /etc/inputrc ~/.inputrc
+# HISTORY ~/.bash_history
+# BASH_ENV .bash_env
+
+export CDPATH=.:$HOME:$HOME/.config/:$HOME/.local:$HOME/.local/src
+
+# https://specifications.freedesktop.org/basedir-spec/latest/ar01s03.html
+# https://wiki.archlinux.org/title/XDG_Base_Directory
+# binaries and executables in:
+# $HOME/.local/bin should be in $PATH
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_CONFIG_HOME=$HOME/.config
+# documentation, fonts, shortcuts, templates and...
+export XDG_DATA_HOME=$HOME/.local/share
+# logs, history, recent-files, view, layout, open-files, undo-history and...
+export XDG_STATE_HOME=$HOME/.local/state
+# sockets, pipes and... dir must be 0700
+# export XDG_RUNTIME_DIR=/run/user/$(id -u)
+# export XDG_DATA_DIRS=/usr/local/share:/usr/share
+
+# https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html
+export TZ=/etc/localtime
+# locale for language https://pubs.opengroup.org/onlinepubs/7908799/xbd/envvar.html
+export LANG=en_US.UTF-8
+
+export INPUTRC=$XDG_CONFIG_HOME/bash/input
+export BASH_ENV=$XDG_CONFIG_HOME/bash/env
+
+export HISTFILE=$XDG_STATE_HOME/bash/history
+export HISTCONTROL=ignoreboth:erasedups
+export HISTFILESIZE=-1
+export HISTSIZE=-1
+shopt -s histappend
+
+export TERM=screen-256color
+export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
+export MANPATH=$HOME/.local/man:$MANPATH
+# export READER=
+export EDITOR=nvim
+export CSHEDIT=nvim
+export TERMINAL=alacritty
+export BROWSER=brave-browser-stable
+export WINDOWMANAGER=i3
+export COMPOSER_MEMORY_LIMIT=-1
+
+# xorg settings
+export XAUTHORITY=$XDG_CONFIG_HOME/xorg/authority
+export XINITRC=$XDG_CONFIG_HOME/xorg/initialize
+export XSERVERRC=$XDG_CONFIG_HOME/xorg/server
+
+# JetBrainsMono Nerd Font for symbols
+export TMUX_LABEL="$(tmux -V | awk '{printf "  tmux %.3s", $2}')"

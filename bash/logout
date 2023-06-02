@@ -1,0 +1,6 @@
+# shut it down if we own the agent
+if (($$ == $SSH_AGENT_OWN)); then
+
+  [[ -n "$SSH_AGENT_PID" ]] && ssh-agent -k
+  [[ -S "$SSH_AUTH_SOCK" ]] && rm "$SSH_AUTH_SOCK"
+fi

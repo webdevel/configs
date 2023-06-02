@@ -1,0 +1,148 @@
+# exit if not running interactively
+[[ $- != *i* ]] && return
+
+# bash -c command/normal shell sources BASH_ENV not if invoked as sh
+# -l --login shell sources /etc/profile and one of ~/.bash_profile ~/.bash_login ~/.profile
+# -i interactive shell /etc/bash.bashrc, ~/.bashrc and ~/.bash_logout on exit
+
+# initialize terminal according to $TERM and terminfo
+tput init
+
+# set prompt
+export PS1="\[\e[38;2;48;48;48m\] \w \[\e[0m\]"
+export COLORTERM=truecolor
+export CLICOLOR=1
+
+alias ccat='bat --plain --paging=never'
+alias ls='exa --all --icons --color=auto'
+# alias ls='ls --all --color=auto'
+alias git-log='git log --graph --decorate --pretty=oneline --abbrev-commit'
+alias grep='grep --color=auto'
+alias poweroff='systemctl poweroff'
+alias reboot='systemctl reboot'
+# https://github.com/termstandard/colors
+alias color-true='printf "\x1b[38;2;55;100;100mTRUECOLOR\x1b[0m\n"'
+
+export GREP_COLORS='mt=0;32'
+
+export LS_OPTIONS='-N --color=auto -T 0'
+# dircolors --print-ls-colors
+# no 0     normal text
+# fi 0     regular files
+# di 32    directories
+# ln 36    symbolic link
+# pi 31    named pipes
+# so 33    socket
+# bd 44;37 block device
+# cd 44;37 character device
+# or 36    orphan symlink
+# mi 0     missing file
+# su 37;41 user file
+# sg 30;43 group file
+# tw 30;42 sticky world writable directory
+# ow 34;43 not sticky world writable directory
+# sa 0     suffix alias file
+# st 37;44 sticky directory not world writable
+# ex 35    executable file
+# lc \e[   left code
+# rc m     right code
+# tc 0     file type character if LIST_TYPES set
+# sp 0     match column spaces
+# ec 0     end code
+# rs 0     reset code
+# mh 0     multihardlink
+# ca 0     capability
+# do 01;35 door
+# *ext glob match
+# output shell code to set LS_COLORS
+#eval $(dircolors --sh)
+# export LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:'
+# export EXA_COLORS=
+# ur     the user-read permission bit
+# uw     the user-write permission bit
+# ux     the user-execute permission bit for regular files
+# ue     the user-execute for other file kinds
+# gr     the group-read permission bit
+# gw     the group-write permission bit
+# gx     the group-execute permission bit
+# tr     the others-read permission bit
+# tw     the others-write permission bit
+# tx     the others-execute permission bit
+# su     setuid, setgid, and sticky permission bits for files
+# sf     setuid, setgid, and sticky for other file kinds
+# xa     the extended attribute indicator
+# sn     the numbers of a file’s size (sets nb, nk, nm, ng and nh)
+# nb     the numbers of a file’s size if it is lower than 1 KB/Kib
+# nk     the numbers of a file’s size if it is between 1 KB/KiB and 1 MB/MiB
+# nm     the numbers of a file’s size if it is between 1 MB/MiB and 1 GB/GiB
+# ng     the numbers of a file’s size if it is between 1 GB/GiB and 1 TB/TiB
+# nt     the numbers of a file’s size if it is 1 TB/TiB or higher
+# sb     the units of a file’s size (sets ub, uk, um, ug and uh)
+# ub     the units of a file’s size if it is lower than 1 KB/Kib
+# uk     the units of a file’s size if it is between 1 KB/KiB and 1 MB/MiB
+# um     the units of a file’s size if it is between 1 MB/MiB and 1 GB/GiB
+# ug     the units of a file’s size if it is between 1 GB/GiB and 1 TB/TiB
+# ut     the units of a file’s size if it is 1 TB/TiB or higher
+# df     a device’s major ID
+# ds     a device’s minor ID
+# uu     a user that’s you
+# un     a user that’s someone else
+# gu     a group that you belong to
+# gn     a group you aren’t a member of
+# lc     a number of hard links
+# lm     a number of hard links for a regular file with at least two
+# ga     a new flag in Git
+# gm     a modified flag in Git
+# gd     a deleted flag in Git
+# gv     a renamed flag in Git
+# gt     a modified metadata flag in Git
+# xx     “punctuation”, including many background UI elements
+# da     a file’s date
+# in     a file’s inode number
+# bl     a file’s number of blocks
+# hd     the header row of a table
+# lp     the path of a symlink
+# cc     an escaped character in a filename
+# bO     the overlay style for broken symlink paths
+
+# less and man command color https://wiki.archlinux.org/index.php/Color_output_in_console#man
+export LESS='-M -R -s --use-color +Gg'
+export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
+export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
+export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
+export LESS_TERMCAP_us=$'\E[01;32m'    # begin underline
+export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
+export GROFF_NO_SGR=1
+export PAGER="less $LESS"
+
+# export PS_COLORS=
+# export PS_FORMAT=
+
+# change directory without cd command only typing directory name
+shopt -s autocd
+
+# resolve CTRL-S key conflict by disabling tty CTRL-S XON/XOFF flow control.
+# this unblocks readline and bash CTRL-S to forward-search-history
+stty -ixon
+
+# start ssh-agent if not started
+if ! pgrep --exact 'ssh-agent' > /dev/null ; then
+
+  for v in $(ssh-agent -s -a "$XDG_RUNTIME_DIR/$$" | head -n 2 | awk -F\; '{printf "%s\n", $1}'); do
+
+    export "$v"
+  done
+  export SSH_AGENT_OWN=$$
+
+  for i in $(grep IdentityFile "$HOME/.ssh/config" | awk -F\~ '{print $2}'); do
+    ssh-add "${HOME}$i"
+  done
+fi
+
+# if [[ "root" != "$USER" && -z $DISPLAY && -n $XDG_VTNR && 1 -eq $XDG_VTNR ]]; then
+
+#   xinit $XINITRC -- $XSERVERRC
+
+# fi

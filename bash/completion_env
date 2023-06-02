@@ -1,0 +1,24 @@
+# https://github.com/scop/bash-completion/blob/master/doc/configuration.md
+
+# $XDG_CONFIG_HOME/bash_completion Sourced by the bash_completion.sh profile.d script.
+# This file is suitable for definitions of all COMP_* environment variables below.
+# If $XDG_CONFIG_HOME is unset or null, ~/.config is used instead of it.
+
+# If set and not null, completions that look for filenames based on their "extensions"
+# will fall back to suggesting all files if there are none matching the sought ones.
+export COMP_FILEDIR_FALLBACK=on
+
+# If set and not null, iwconfig completion will try to complete on available wireless networks identifiers. Default is unset.
+export COMP_IWLIST_SCAN=on
+
+# If set and not null (default), known hosts completion will complement hostnames from ssh’s known_hosts files
+# hostnames taken from the file specified by the HOSTFILE shell variable (compgen -A hostname)
+export COMP_KNOWN_HOSTS_WITH_HOSTFILE=on
+
+# default $XDG_DATA_HOME/bash-completion or ~/.local/share/bash-completion
+export BASH_COMPLETION_USER_DIR=$XDG_DATA_HOME/bash
+
+# defualt ~/.bash_completion
+# Sourced late after everything else. Use to load additional completions and remove/override others.
+export BASH_COMPLETION_USER_FILE=$XDG_CONFIG_HOME/bash/completion
+
