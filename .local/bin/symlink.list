@@ -1,0 +1,2 @@
+LINKS="$LINKS
+.local/src/home/bin:.local/bin"

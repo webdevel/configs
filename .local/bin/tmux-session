@@ -5,7 +5,7 @@ SUCCESS=0
 session=session
 windows=3
 is_session_created=1
-is_tmux_on_path=$(type tmux &>/dev/null; echo $?)
+is_tmux_on_path=$(type tmux > /dev/null 2>&1; echo $?)
 
 show_help()
 {
@@ -47,7 +47,7 @@ while getopts "hs:w:" option; do
 done
 
 # tell the user when tmux is not found and exit
-if [[ $SUCCESS -ne $is_tmux_on_path ]]; then
+if [ $SUCCESS -ne $is_tmux_on_path ]; then
 
   echo "Tmux not found."
 
@@ -57,10 +57,10 @@ if [[ $SUCCESS -ne $is_tmux_on_path ]]; then
 fi
 
 # list sessions and check if it exists
-does_session_exist=$(tmux list-sessions 2>/dev/null | grep "$session" &>/dev/null; echo $?)
+does_session_exist=$(tmux list-sessions 2> /dev/null | grep "$session" > /dev/null 2>&1; echo $?)
 
 # only create session if it does not exist already
-if [[ $SUCCESS -ne $does_session_exist ]]; then
+if [ $SUCCESS -ne $does_session_exist ]; then
 
   # create tmux session, but do not attach to it yet
   tmux new-session -ds $session
@@ -71,20 +71,20 @@ if [[ $SUCCESS -ne $does_session_exist ]]; then
 fi
 
 # only create additional windows if windows count is a positive number we expect
-if [[ 1 -lt $windows ]]; then
+if [ 1 -lt $windows ]; then
 
   # iterate through window count sequence
   for window in $(seq 1 $windows); do
 
     # attempt to create window while suppressing errors
-    tmux new-window -dt $session:$window 2>/dev/null
+    tmux new-window -dt $session:$window 2> /dev/null
 
   done
 
 fi
 
 # only select window pane if session is created
-if [[ $SUCCESS -eq $is_session_created ]]; then
+if [ $SUCCESS -eq $is_session_created ]; then
 
   tmux select-window -t $session:1
   tmux select-pane -t $session:1.1

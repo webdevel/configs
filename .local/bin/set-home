@@ -1,0 +1,8 @@
+#!/usr/bin/sh
+
+# setup user home directory from version control source
+
+LISTS="directory.list
+symlink.list"
+
+SETS="bin"
