@@ -1,5 +1,9 @@
 #!/usr/bin/sh
 
+# increase amixer -q sset Master 3%+ unmute
+# decrease amixer -q sset Master 3%- unmute
+# mute     amixer -q sset Master toggle
+
 card=1
 vol="110%"
 dcb="1dB"
