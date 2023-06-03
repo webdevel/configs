@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+/usr/sbin/cryptsetup close home

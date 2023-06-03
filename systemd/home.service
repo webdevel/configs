@@ -1,0 +1,19 @@
+[Unit]
+Description=Close Encrypted Home
+DefaultDependencies=no
+BindsTo=dev-nvme0n1p3.device
+After=dev-nvme0n1p3.device
+BindsTo=dev-mapper-home.device
+Requires=home.mount
+Before=home.mount
+Conflicts=umount.target
+Before=umount.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+TimeoutSec=0
+ExecStop=/usr/sbin/cryptsetup close home --verbose
+
+[Install]
+RequiredBy=dev-mapper-home.device

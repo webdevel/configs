@@ -1,0 +1,19 @@
+[Unit]
+Description=Mount Encrypted Home On Login
+Requires=user@1000.service
+Before=user@1000.service
+After=local-fs.target
+BindsTo=dev-mapper-home.device
+After=dev-mapper-home.device
+Requisite=dev-mapper-home.device
+# expect timeout on boot. less than 2 seconds triggers rescue.
+JobTimeoutSec=2
+
+[Mount]
+Where=/home
+What=/dev/mapper/home
+Type=xfs
+Options=defaults,nofail,noauto
+
+[Install]
+RequiredBy=user@1000.service

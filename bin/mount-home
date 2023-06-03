@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+/usr/bin/mount --types xfs --options defaults,nofail,noauto /dev/mapper/home /home
