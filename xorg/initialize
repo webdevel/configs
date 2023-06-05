@@ -1,0 +1,3 @@
+# https://specifications.freedesktop.org/clipboards-spec/clipboards-latest.txt
+
+exec $WINDOWMANAGER
