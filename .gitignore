@@ -1,4 +1,6 @@
 *.log
 *.swp
 .DS_Store
+open-home
 packer_compiled.lua
+pam-open-home
