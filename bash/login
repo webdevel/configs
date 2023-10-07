@@ -52,6 +52,9 @@ export PATH="$PATH:$JAVA_HOME/bin"
 export XAUTHORITY=$XDG_CONFIG_HOME/xorg/authority
 export XINITRC=$XDG_CONFIG_HOME/xorg/initialize
 export XSERVERRC=$XDG_CONFIG_HOME/xorg/server
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
+#export __GLX_VENDOR_LIBRARY_NAME=nvidia %command%
 
 # JetBrainsMono Nerd Font for symbols
 export TMUX_LABEL="$(tmux -V | awk '{printf "  tmux %.3s", $2}')"

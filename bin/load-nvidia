@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+# group video 485
+sudo modprobe nvidia NVreg_DeviceFileUID=1000 NVreg_DeviceFileGID=485 NVreg_DeviceFileMode=0770
+sudo chown 1000:485 /dev/drm* /dev/fb* /dev/dri /dev/dri/* /dev/vga* /dev/nvidia*

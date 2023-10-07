@@ -1,3 +1,4 @@
 # https://specifications.freedesktop.org/clipboards-spec/clipboards-latest.txt
 
+xrdb -nocpp -load -retain $XDG_CONFIG_HOME/xorg/resources
 exec $WINDOWMANAGER

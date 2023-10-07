@@ -1,0 +1,305 @@
+[   408.743] 
+X.Org X Server 1.21.1.8
+X Protocol Version 11, Revision 0
+[   408.743] Current Operating System: Linux steel 6.3.9-1-default #1 SMP PREEMPT_DYNAMIC Thu Jun 22 03:53:43 UTC 2023 (0df701d) x86_64
+[   408.743] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-6.3.9-1-default nomodeset i915.modeset=0 rcutree.rcu_idle_gp_delay=1 root=UUID=c2769371-0172-4419-b7cf-f8fc8dae7f59 splash=silent quiet security=apparmor mitigations=off nosimplefb=1
+[   408.744]  
+[   408.744] Current version of pixman: 0.42.2
+[   408.744] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[   408.744] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[   408.744] (==) Log file: "/var/log/Xorg.0.log", Time: Mon Jul 10 11:02:58 2023
+[   408.744] (==) Using config directory: "/etc/X11/xorg.conf.d"
+[   408.744] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[   408.744] (==) ServerLayout "MainLayout"
+[   408.744] (==) No screen section available. Using defaults.
+[   408.744] (**) |-->Screen "Default Screen Section" (0)
+[   408.744] (**) |   |-->Monitor "<default monitor>"
+[   408.744] (==) No device specified for screen "Default Screen Section".
+	Using the first device section listed.
+[   408.744] (**) |   |-->Device "Nvidia"
+[   408.744] (==) No monitor specified for screen "Default Screen Section".
+	Using a default monitor configuration.
+[   408.744] (**) Option "BlankTime" "0"
+[   408.744] (==) Automatically adding devices
+[   408.744] (==) Automatically enabling devices
+[   408.744] (==) Automatically adding GPU devices
+[   408.744] (==) Automatically binding GPU devices
+[   408.744] (==) Max clients allowed: 512, resource mask: 0xfffff
+[   408.744] (WW) The directory "/usr/share/fonts/Type1/" does not exist.
+[   408.744] 	Entry deleted from font path.
+[   408.744] (WW) The directory "/usr/share/fonts/100dpi" does not exist.
+[   408.744] 	Entry deleted from font path.
+[   408.744] (WW) The directory "/usr/share/fonts/75dpi" does not exist.
+[   408.744] 	Entry deleted from font path.
+[   408.744] (WW) The directory "/usr/share/fonts/ghostscript/" does not exist.
+[   408.744] 	Entry deleted from font path.
+[   408.744] (WW) The directory "/usr/share/fonts/cyrillic" does not exist.
+[   408.744] 	Entry deleted from font path.
+[   408.744] (WW) The directory "/usr/share/fonts/misc/sgi" does not exist.
+[   408.744] 	Entry deleted from font path.
+[   408.744] (==) FontPath set to:
+	/usr/share/fonts/misc:unscaled,
+	/usr/share/fonts/truetype/,
+	built-ins
+[   408.744] (==) ModulePath set to "/usr/lib64/xorg/modules"
+[   408.744] (WW) Ignoring unrecognized extension "XFree86-DGA"
+[   408.744] (II) The server relies on udev to provide the list of input devices.
+	If no devices become available, reconfigure udev or disable AutoAddDevices.
+[   408.744] (II) Loader magic: 0x55f5810edac0
+[   408.744] (II) Module ABI versions:
+[   408.744] 	X.Org ANSI C Emulation: 0.4
+[   408.744] 	X.Org Video Driver: 25.2
+[   408.744] 	X.Org XInput driver : 24.4
+[   408.744] 	X.Org Server Extension : 10.0
+[   408.745] (--) using VT number 2
+
+[   408.748] (II) systemd-logind: took control of session /org/freedesktop/login1/session/_31
+[   408.749] (II) xfree86: Adding drm device (/dev/dri/card0)
+[   408.749] (II) Platform probe for /sys/devices/pci0000:00/0000:00:01.0/0000:01:00.0/drm/card0
+[   408.750] (II) systemd-logind: got fd for /dev/dri/card0 226:0 fd 10 paused 0
+[   408.754] (--) PCI:*(0@0:2:0) 8086:4688:1462:139a rev 12, Mem @ 0x6233000000/16777216, 0x4000000000/268435456, I/O @ 0x00007000/64, BIOS @ 0x????????/131072
+[   408.754] (--) PCI: (1@0:0:0) 10de:24a0:1462:139a rev 161, Mem @ 0x53000000/16777216, 0x6000000000/8589934592, 0x6200000000/33554432, I/O @ 0x00006000/128, BIOS @ 0x????????/524288
+[   408.754] (II) "glx" will be loaded by default.
+[   408.754] (II) LoadModule: "extmod"
+[   408.754] (II) Module "extmod" already built-in
+[   408.754] (II) LoadModule: "glx"
+[   408.754] (II) Loading /usr/lib64/xorg/modules/extensions/libglx.so
+[   408.756] (II) Module glx: vendor="X.Org Foundation"
+[   408.756] 	compiled for 1.21.1.8, module version = 1.0.0
+[   408.756] 	ABI class: X.Org Server Extension, version 10.0
+[   408.756] (II) LoadModule: "nvidia"
+[   408.756] (II) Loading /usr/lib64/xorg/modules/drivers/nvidia_drv.so
+[   408.756] (II) Module nvidia: vendor="NVIDIA Corporation"
+[   408.756] 	compiled for 1.6.99.901, module version = 1.0.0
+[   408.756] 	Module class: X.Org Video Driver
+[   408.756] (II) NVIDIA dlloader X Driver  535.54.03  Tue Jun  6 22:23:02 UTC 2023
+[   408.756] (II) NVIDIA Unified Driver for all Supported NVIDIA GPUs
+[   408.788] (II) systemd-logind: releasing fd for 226:0
+[   408.789] (II) Loading sub module "fb"
+[   408.789] (II) LoadModule: "fb"
+[   408.789] (II) Module "fb" already built-in
+[   408.789] (II) Loading sub module "wfb"
+[   408.789] (II) LoadModule: "wfb"
+[   408.789] (II) Loading /usr/lib64/xorg/modules/libwfb.so
+[   408.789] (II) Module wfb: vendor="X.Org Foundation"
+[   408.789] 	compiled for 1.21.1.8, module version = 1.0.0
+[   408.789] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[   408.789] (II) NVIDIA(0): Creating default Display subsection in Screen section
+	"Default Screen Section" for depth/fbbpp 24/32
+[   408.789] (==) NVIDIA(0): Depth 24, (==) framebuffer bpp 32
+[   408.789] (==) NVIDIA(0): RGB weight 888
+[   408.789] (==) NVIDIA(0): Default visual is TrueColor
+[   408.789] (==) NVIDIA(0): Using gamma correction (1.0, 1.0, 1.0)
+[   408.789] (**) NVIDIA(0): Enabling 2D acceleration
+[   408.789] (II) Loading sub module "glxserver_nvidia"
+[   408.789] (II) LoadModule: "glxserver_nvidia"
+[   408.789] (II) Loading /usr/lib64/xorg/modules/extensions/libglxserver_nvidia.so
+[   408.885] (II) Module glxserver_nvidia: vendor="NVIDIA Corporation"
+[   408.885] 	compiled for 1.6.99.901, module version = 1.0.0
+[   408.885] 	Module class: X.Org Server Extension
+[   408.885] (II) NVIDIA GLX Module  535.54.03  Tue Jun  6 22:23:41 UTC 2023
+[   408.886] (II) NVIDIA: The X server supports PRIME Render Offload.
+[   408.886] (--) NVIDIA(0): Valid display device(s) on GPU-0 at PCI:1:0:0
+[   408.886] (--) NVIDIA(0):     DFP-0
+[   408.886] (--) NVIDIA(0):     DFP-1
+[   408.886] (--) NVIDIA(0):     DFP-2
+[   408.886] (--) NVIDIA(0):     DFP-3
+[   408.886] (--) NVIDIA(0):     DFP-4
+[   408.886] (--) NVIDIA(0):     DFP-5
+[   408.886] (--) NVIDIA(0):     DFP-6
+[   408.886] (--) NVIDIA(0):     DFP-7
+[   408.888] (II) NVIDIA(0): NVIDIA GPU NVIDIA GeForce RTX 3070 Ti Laptop GPU (GA104-A) at
+[   408.888] (II) NVIDIA(0):     PCI:1:0:0 (GPU-0)
+[   408.888] (--) NVIDIA(0): Memory: 8388608 kBytes
+[   408.888] (--) NVIDIA(0): VideoBIOS: 94.04.7f.40.6b
+[   408.888] (II) NVIDIA(0): Detected PCI Express Link width: 16X
+[   408.888] (--) NVIDIA(GPU-0): DFP-0: disconnected
+[   408.888] (--) NVIDIA(GPU-0): DFP-0: Internal DisplayPort
+[   408.888] (--) NVIDIA(GPU-0): DFP-0: 2670.0 MHz maximum pixel clock
+[   408.888] (--) NVIDIA(GPU-0): 
+[   408.889] (--) NVIDIA(GPU-0): DFP-1: disconnected
+[   408.889] (--) NVIDIA(GPU-0): DFP-1: Internal TMDS
+[   408.889] (--) NVIDIA(GPU-0): DFP-1: 165.0 MHz maximum pixel clock
+[   408.889] (--) NVIDIA(GPU-0): 
+[   408.889] (--) NVIDIA(GPU-0): DFP-2: disconnected
+[   408.889] (--) NVIDIA(GPU-0): DFP-2: Internal DisplayPort
+[   408.889] (--) NVIDIA(GPU-0): DFP-2: 2670.0 MHz maximum pixel clock
+[   408.889] (--) NVIDIA(GPU-0): 
+[   408.889] (--) NVIDIA(GPU-0): DFP-3: disconnected
+[   408.889] (--) NVIDIA(GPU-0): DFP-3: Internal TMDS
+[   408.889] (--) NVIDIA(GPU-0): DFP-3: 165.0 MHz maximum pixel clock
+[   408.889] (--) NVIDIA(GPU-0): 
+[   408.889] (--) NVIDIA(GPU-0): DFP-4: disconnected
+[   408.889] (--) NVIDIA(GPU-0): DFP-4: Internal TMDS
+[   408.889] (--) NVIDIA(GPU-0): DFP-4: 165.0 MHz maximum pixel clock
+[   408.889] (--) NVIDIA(GPU-0): 
+[   408.889] (--) NVIDIA(GPU-0): DFP-5: disconnected
+[   408.889] (--) NVIDIA(GPU-0): DFP-5: Internal DisplayPort
+[   408.889] (--) NVIDIA(GPU-0): DFP-5: 2670.0 MHz maximum pixel clock
+[   408.889] (--) NVIDIA(GPU-0): 
+[   408.889] (--) NVIDIA(GPU-0): DFP-6: disconnected
+[   408.889] (--) NVIDIA(GPU-0): DFP-6: Internal DisplayPort
+[   408.889] (--) NVIDIA(GPU-0): DFP-6: 2670.0 MHz maximum pixel clock
+[   408.889] (--) NVIDIA(GPU-0): 
+[   408.889] (--) NVIDIA(GPU-0): DFP-7: disconnected
+[   408.889] (--) NVIDIA(GPU-0): DFP-7: Internal TMDS
+[   408.889] (--) NVIDIA(GPU-0): DFP-7: 165.0 MHz maximum pixel clock
+[   408.889] (--) NVIDIA(GPU-0): 
+[   408.889] (==) NVIDIA(0): 
+[   408.889] (==) NVIDIA(0): No modes were requested; the default mode "nvidia-auto-select"
+[   408.889] (==) NVIDIA(0):     will be used as the requested mode.
+[   408.889] (==) NVIDIA(0): 
+[   408.889] (--) NVIDIA(0): No enabled display devices found; starting anyway because
+[   408.889] (--) NVIDIA(0):     AllowEmptyInitialConfiguration is enabled
+[   408.897] (II) NVIDIA(0): Validated MetaModes:
+[   408.897] (II) NVIDIA(0):     "NULL"
+[   408.897] (II) NVIDIA(0): Virtual screen size determined to be 640 x 480
+[   408.897] (WW) NVIDIA(0): Unable to get display device for DPI computation.
+[   408.897] (==) NVIDIA(0): DPI set to (75, 75); computed from built-in default
+[   408.897] (II) NVIDIA: Reserving 24576.00 MB of virtual memory for indirect memory
+[   408.897] (II) NVIDIA:     access.
+[   408.913] (II) NVIDIA(0): ACPI: failed to connect to the ACPI event daemon; the daemon
+[   408.913] (II) NVIDIA(0):     may not be running or the "AcpidSocketPath" X
+[   408.913] (II) NVIDIA(0):     configuration option may not be set correctly.  When the
+[   408.913] (II) NVIDIA(0):     ACPI event daemon is available, the NVIDIA X driver will
+[   408.913] (II) NVIDIA(0):     try to use it to receive ACPI event notifications.  For
+[   408.913] (II) NVIDIA(0):     details, please see the "ConnectToAcpid" and
+[   408.913] (II) NVIDIA(0):     "AcpidSocketPath" X configuration options in Appendix B: X
+[   408.913] (II) NVIDIA(0):     Config Options in the README.
+[   408.927] (II) NVIDIA(0): Setting mode "NULL"
+[   408.947] (==) NVIDIA(0): Disabling shared memory pixmaps
+[   408.947] (==) NVIDIA(0): Backing store enabled
+[   408.947] (==) NVIDIA(0): Silken mouse enabled
+[   408.947] (==) NVIDIA(0): DPMS enabled
+[   408.947] (II) Loading sub module "dri2"
+[   408.947] (II) LoadModule: "dri2"
+[   408.947] (II) Module "dri2" already built-in
+[   408.947] (II) NVIDIA(0): [DRI2] Setup complete
+[   408.947] (II) NVIDIA(0): [DRI2]   VDPAU driver: nvidia
+[   408.947] (II) Initializing extension Generic Event Extension
+[   408.947] (II) Initializing extension SHAPE
+[   408.947] (II) Initializing extension MIT-SHM
+[   408.948] (II) Initializing extension XInputExtension
+[   408.948] (II) Initializing extension XTEST
+[   408.948] (II) Initializing extension BIG-REQUESTS
+[   408.948] (II) Initializing extension SYNC
+[   408.948] (II) Initializing extension XKEYBOARD
+[   408.948] (II) Initializing extension XC-MISC
+[   408.948] (II) Initializing extension SECURITY
+[   408.948] (II) Initializing extension XFIXES
+[   408.948] (II) Initializing extension RENDER
+[   408.948] (II) Initializing extension RANDR
+[   408.948] (II) Initializing extension COMPOSITE
+[   408.948] (II) Initializing extension DAMAGE
+[   408.948] (II) Initializing extension MIT-SCREEN-SAVER
+[   408.948] (II) Initializing extension DOUBLE-BUFFER
+[   408.948] (II) Initializing extension RECORD
+[   408.948] (II) Initializing extension DPMS
+[   408.948] (II) Initializing extension Present
+[   408.948] (II) Initializing extension DRI3
+[   408.948] (II) Initializing extension X-Resource
+[   408.948] (II) Initializing extension XVideo
+[   408.948] (II) Initializing extension XVideo-MotionCompensation
+[   408.948] (II) Initializing extension GLX
+[   408.948] (II) Initializing extension GLX
+[   408.948] (II) Indirect GLX disabled.
+[   408.949] (II) GLX: Another vendor is already registered for screen 0
+[   408.949] (II) Initializing extension XFree86-VidModeExtension
+[   408.949] (II) Initializing extension XFree86-DGA
+[   408.949] (II) Initializing extension XFree86-DRI
+[   408.949] (II) Initializing extension DRI2
+[   408.949] (II) Initializing extension NV-GLX
+[   408.949] (II) Initializing extension NV-CONTROL
+[   409.009] (II) config/udev: Adding input device Lid Switch (/dev/input/event1)
+[   409.009] (II) No input driver specified, ignoring this device.
+[   409.009] (II) This device may have been added with another device file.
+[   409.009] (II) config/udev: Adding input device Power Button (/dev/input/event3)
+[   409.009] (**) Power Button: Applying InputClass "evdev keyboard catchall"
+[   409.009] (**) Power Button: Applying InputClass "libinput keyboard catchall"
+[   409.009] (II) LoadModule: "libinput"
+[   409.009] (II) Loading /usr/lib64/xorg/modules/input/libinput_drv.so
+[   409.011] (II) Module libinput: vendor="X.Org Foundation"
+[   409.011] 	compiled for 1.21.1.8, module version = 1.3.0
+[   409.011] 	Module class: X.Org XInput Driver
+[   409.011] 	ABI class: X.Org XInput driver, version 24.4
+[   409.011] (II) Using input driver 'libinput' for 'Power Button'
+[   409.012] (II) systemd-logind: got fd for /dev/input/event3 13:67 fd 38 paused 1
+[   409.012] (II) systemd-logind: releasing fd for 13:67
+[   409.057] (II) config/udev: Adding input device Sleep Button (/dev/input/event2)
+[   409.057] (**) Sleep Button: Applying InputClass "evdev keyboard catchall"
+[   409.057] (**) Sleep Button: Applying InputClass "libinput keyboard catchall"
+[   409.057] (II) Using input driver 'libinput' for 'Sleep Button'
+[   409.058] (II) systemd-logind: got fd for /dev/input/event2 13:66 fd 38 paused 1
+[   409.058] (II) systemd-logind: releasing fd for 13:66
+[   409.078] (II) config/udev: Adding input device SteelSeries SteelSeries KLC (/dev/input/event4)
+[   409.078] (**) SteelSeries SteelSeries KLC: Applying InputClass "evdev keyboard catchall"
+[   409.078] (**) SteelSeries SteelSeries KLC: Applying InputClass "libinput keyboard catchall"
+[   409.078] (II) Using input driver 'libinput' for 'SteelSeries SteelSeries KLC'
+[   409.080] (II) systemd-logind: got fd for /dev/input/event4 13:68 fd 38 paused 1
+[   409.080] (II) systemd-logind: releasing fd for 13:68
+[   409.105] (II) config/udev: Adding input device MSNB0001:00 06CB:7E7E Mouse (/dev/input/event10)
+[   409.105] (**) MSNB0001:00 06CB:7E7E Mouse: Applying InputClass "evdev pointer catchall"
+[   409.105] (**) MSNB0001:00 06CB:7E7E Mouse: Applying InputClass "libinput pointer catchall"
+[   409.105] (II) Using input driver 'libinput' for 'MSNB0001:00 06CB:7E7E Mouse'
+[   409.107] (II) systemd-logind: got fd for /dev/input/event10 13:74 fd 38 paused 1
+[   409.107] (II) systemd-logind: releasing fd for 13:74
+[   409.145] (II) config/udev: Adding input device MSNB0001:00 06CB:7E7E Mouse (/dev/input/mouse0)
+[   409.145] (II) No input driver specified, ignoring this device.
+[   409.145] (II) This device may have been added with another device file.
+[   409.146] (II) config/udev: Adding input device MSNB0001:00 06CB:7E7E Touchpad (/dev/input/event11)
+[   409.146] (**) MSNB0001:00 06CB:7E7E Touchpad: Applying InputClass "evdev touchpad catchall"
+[   409.146] (**) MSNB0001:00 06CB:7E7E Touchpad: Applying InputClass "libinput touchpad catchall"
+[   409.146] (**) MSNB0001:00 06CB:7E7E Touchpad: Applying InputClass "MainTouchpad"
+[   409.146] (II) Using input driver 'libinput' for 'MSNB0001:00 06CB:7E7E Touchpad'
+[   409.148] (II) systemd-logind: got fd for /dev/input/event11 13:75 fd 38 paused 1
+[   409.148] (II) systemd-logind: releasing fd for 13:75
+[   409.193] (II) config/udev: Adding input device MSNB0001:00 06CB:7E7E Touchpad (/dev/input/mouse1)
+[   409.193] (II) No input driver specified, ignoring this device.
+[   409.193] (II) This device may have been added with another device file.
+[   409.194] (II) config/udev: Adding input device sof-hda-dsp Mic (/dev/input/event13)
+[   409.194] (II) No input driver specified, ignoring this device.
+[   409.194] (II) This device may have been added with another device file.
+[   409.194] (II) config/udev: Adding input device sof-hda-dsp Headphone (/dev/input/event14)
+[   409.194] (II) No input driver specified, ignoring this device.
+[   409.194] (II) This device may have been added with another device file.
+[   409.195] (II) config/udev: Adding input device gpio-keys (/dev/input/event9)
+[   409.195] (II) No input driver specified, ignoring this device.
+[   409.195] (II) This device may have been added with another device file.
+[   409.196] (II) config/udev: Adding input device Intel HID events (/dev/input/event5)
+[   409.196] (**) Intel HID events: Applying InputClass "evdev keyboard catchall"
+[   409.196] (**) Intel HID events: Applying InputClass "libinput keyboard catchall"
+[   409.196] (II) Using input driver 'libinput' for 'Intel HID events'
+[   409.197] (II) systemd-logind: got fd for /dev/input/event5 13:69 fd 38 paused 1
+[   409.197] (II) systemd-logind: releasing fd for 13:69
+[   409.217] (II) config/udev: Adding input device Intel HID 5 button array (/dev/input/event6)
+[   409.217] (**) Intel HID 5 button array: Applying InputClass "evdev keyboard catchall"
+[   409.217] (**) Intel HID 5 button array: Applying InputClass "libinput keyboard catchall"
+[   409.217] (II) Using input driver 'libinput' for 'Intel HID 5 button array'
+[   409.218] (II) systemd-logind: got fd for /dev/input/event6 13:70 fd 38 paused 1
+[   409.218] (II) systemd-logind: releasing fd for 13:70
+[   409.237] (II) config/udev: Adding input device AT Translated Set 2 keyboard (/dev/input/event0)
+[   409.237] (**) AT Translated Set 2 keyboard: Applying InputClass "evdev keyboard catchall"
+[   409.237] (**) AT Translated Set 2 keyboard: Applying InputClass "libinput keyboard catchall"
+[   409.237] (II) Using input driver 'libinput' for 'AT Translated Set 2 keyboard'
+[   409.239] (II) systemd-logind: got fd for /dev/input/event0 13:64 fd 38 paused 1
+[   409.239] (II) systemd-logind: releasing fd for 13:64
+[   409.261] (II) config/udev: Adding input device AT Raw Set 2 keyboard (/dev/input/event12)
+[   409.261] (**) AT Raw Set 2 keyboard: Applying InputClass "evdev keyboard catchall"
+[   409.261] (**) AT Raw Set 2 keyboard: Applying InputClass "libinput keyboard catchall"
+[   409.261] (II) Using input driver 'libinput' for 'AT Raw Set 2 keyboard'
+[   409.262] (II) systemd-logind: got fd for /dev/input/event12 13:76 fd 38 paused 1
+[   409.262] (II) systemd-logind: releasing fd for 13:76
+[   409.277] (II) config/udev: Adding input device PC Speaker (/dev/input/event7)
+[   409.277] (II) No input driver specified, ignoring this device.
+[   409.277] (II) This device may have been added with another device file.
+[   409.281] (II) config/udev: Adding input device MSI WMI hotkeys (/dev/input/event8)
+[   409.281] (**) MSI WMI hotkeys: Applying InputClass "evdev keyboard catchall"
+[   409.281] (**) MSI WMI hotkeys: Applying InputClass "libinput keyboard catchall"
+[   409.281] (II) Using input driver 'libinput' for 'MSI WMI hotkeys'
+[   409.282] (II) systemd-logind: got fd for /dev/input/event8 13:72 fd 38 paused 1
+[   409.282] (II) systemd-logind: releasing fd for 13:72
+[   681.409] (II) NVIDIA(GPU-0): Deleting GPU-0
+[   681.411] (II) Server terminated successfully (0). Closing log file.

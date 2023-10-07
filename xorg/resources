@@ -1,16 +1,25 @@
-! Xft settings
 ! https://freedesktop.org/wiki/Specifications/XSettingsRegistry/
+
+! point-device settings
+! Max milliseconds between two clicks
+Net.DoubleClickTime: 950
+! Max pixels between two clicks
+Net.DoubleClickDistance: 9
+! Max pixels of cursor move before drag and drop
+Net.DndDragThreshold: 5
+
+! Xft settings
 ! boolean options: 0no, 1yes, -1=default
-Xft.autohint: 0
-Xft.lcdfilter: lcddefault
-Xft.antialias: 1
-Xft.hinting: 1
+!Xft.autohint: 0
+!Xft.lcdfilter: lcddefault
+!Xft.antialias: 1
+!Xft.hinting: 1
 ! "hintnone", "hintslight", "hintmedium", or "hintfull"
-Xft.hintStyle: hintslight
+!Xft.hintStyle: hintslight
 ! Type of subpixel antialiasing; "none", "rgb", "bgr", "vrgb", "vbgr"
-Xft.rgba: rgb
+!Xft.rgba: rgb
 ! Resolution for Xft, in 1024 * dots/inch. -1 to use default value
-Xft.dpi: 96
+!Xft.dpi: 96
 
 ! color scheme options
 ! ANSI colors

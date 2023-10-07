@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-card=1
+card=0
 
 amixer sset Master unmute -c $card
 amixer sset Speaker unmute -c $card

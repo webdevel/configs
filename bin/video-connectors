@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+# get video display connectors
+# https://wiki.archlinux.org/title/Kernel_mode_setting#Forcing_modes_and_EDID
+
+for p in /sys/class/drm/*/status; do con=${p%/status}; echo -n "${con#*/card?-}: "; cat $p; done

@@ -1,5 +1,5 @@
 #/usr/bin/sh
 
-card=1
+card=0
 
 /usr/sbin/alsactl info $card
